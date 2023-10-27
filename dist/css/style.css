@@ -110,6 +110,7 @@ section {
 header {
   padding: 90px 0 50px;
   z-index: 100;
+  animation: visual 1s ease-in;
 }
 
 header.header-page {
@@ -146,8 +147,12 @@ footer {
   padding: 20px 0;
   font-size: 14px;
   font-weight: 400;
+  animation: visual 1s ease-in;
 }
 
+section {
+  animation: visual 1s ease-in;
+}
 section img {
   position: absolute;
   height: 100%;
@@ -155,9 +160,19 @@ section img {
   transform: translateX(39vw);
   object-fit: cover;
   z-index: -1;
+  animation: visual 1.2s ease-in;
+}
+@keyframes visual {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 section .content {
   padding: 150px 0 50px;
+  animation: visual 1s ease-in;
 }
 section .content h1 {
   font-size: 96px;
@@ -279,6 +294,14 @@ section.page p {
   color: var(--black-color);
   position: relative;
   transition: all 0.4s;
+}
+
+li.is_active::before {
+  width: 100%;
+}
+
+li.is_active > a {
+  color: var(--white);
 }
 
 .main-menu li:hover > a {

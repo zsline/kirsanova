@@ -14,3 +14,10 @@ export function isWebp() {
         document.documentElement.classList.add(className);
     });
 }
+
+
+let links = document.querySelectorAll('.main-menu ul li a'); 
+for(var i = 0; i < links.length; i++){ 
+    if(links[i].href == location.href) 
+        links[i].parentNode.className = 'is_active'; 
+} 
