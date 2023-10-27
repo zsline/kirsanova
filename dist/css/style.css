@@ -1,0 +1,153 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  position: relative;
+  margin: 0;
+  padding: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  display: inline-block;
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+li {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: CormorantSC;
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--black-color);
+}
+
+p {
+  font-style: italic;
+}
+
+h1 {
+  font-family: voguersansfree;
+}
+
+a, footer {
+  font-family: Bitter;
+}
+
+header, footer {
+  position: absolute;
+  width: 100%;
+}
+
+footer {
+  bottom: 0px;
+}
+
+section {
+  height: 100vh;
+  overflow: hidden;
+}
+
+.container {
+  max-width: 1430px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+@font-face {
+  font-family: Bitter;
+  font-display: swap;
+  src: url("../fonts/Bitter.woff2") format("woff2"), url("../fonts/Bitter.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: voguersansfree;
+  font-display: swap;
+  src: url("../fonts/voguersansfree.woff2") format("woff2"), url("../fonts/voguersansfree.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: CormorantSC;
+  font-display: swap;
+  src: url("../fonts/CormorantSC-SemiBold.woff2") format("woff2"), url("../fonts/CormorantSC-SemiBold.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: CormorantSC;
+  font-display: swap;
+  src: url("../fonts/CormorantSC-Bold.woff2") format("woff2"), url("../fonts/CormorantSC-Bold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+}
+header {
+  padding: 90px 0 50px;
+}
+
+header ul {
+  display: flex;
+  gap: 40px;
+  align-items: center;
+}
+header ul li {
+  opacity: 0.7;
+  transition: all 0.3s;
+}
+header ul li:hover {
+  opacity: 1;
+}
+
+footer {
+  background-color: var(--black);
+  color: var(--white);
+  padding: 20px 0;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+section img {
+  position: absolute;
+  height: 100%;
+  width: 61vw;
+  transform: translateX(39vw);
+  object-fit: cover;
+  z-index: -1;
+}
+section .content {
+  padding: 150px 0 100px;
+}
+section .content h1 {
+  font-size: 96px;
+  margin-top: 50px;
+}
+
+section.page img {
+  top: 0;
+  height: 100%;
+  width: 45vw;
+  transform: translateX(55vw);
+  object-fit: cover;
+}

@@ -1,0 +1,53 @@
+@import "reset";
+@import "global";
+@import "fonts";
+
+
+header{
+    padding: 90px 0 50px;
+}
+header ul{
+    display: flex;
+    gap: 40px;
+    align-items: center;
+    li{
+        opacity: .7;
+        transition: all 0.3s;
+    }
+    li:hover{
+        opacity: 1;
+    }
+}
+footer{
+    background-color: var(--black);
+    color: var(--white);
+    padding: 20px 0;
+    font-size: 14px;
+    font-weight: 400;
+}
+section {
+    img {
+        position: absolute;
+        height: 100%;
+        width: 61vw;
+        transform: translateX(39vw);
+        object-fit: cover;
+        z-index: -1;
+    }
+    .content{
+      padding: 150px 0 100px;  
+      h1{
+        font-size: 96px;
+        margin-top: 50px;
+      }
+    }
+}
+section.page {
+    img {
+        top: 0;
+        height: 100%;
+        width: 45vw;
+        transform: translateX(55vw);
+        object-fit: cover;
+    }
+}

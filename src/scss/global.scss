@@ -1,0 +1,33 @@
+body{
+    font-family: CormorantSC;
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--black-color);
+}
+p{
+    font-style: italic;
+}
+h1{
+    font-family: voguersansfree;
+}
+
+a, footer{
+    font-family: Bitter;
+}
+header, footer{
+    position: absolute;
+    width: 100%;
+}
+footer{
+    bottom: 0px;
+}
+section{
+    height: 100vh;
+    overflow: hidden;
+}
+.container{
+    max-width: 1430px;
+    padding: 0 15px;
+    margin: 0 auto;
+}
+
