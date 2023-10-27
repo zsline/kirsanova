@@ -37,7 +37,7 @@ li {
 }
 
 body {
-  font-family: CormorantSC;
+  font-family: Cormorant;
   font-size: 24px;
   font-weight: 700;
   color: var(--black-color);
@@ -51,11 +51,13 @@ h1 {
   font-family: voguersansfree;
 }
 
-a, footer {
+a,
+footer {
   font-family: Bitter;
 }
 
-header, footer {
+header,
+footer {
   position: absolute;
   width: 100%;
 }
@@ -137,11 +139,20 @@ section img {
   z-index: -1;
 }
 section .content {
-  padding: 150px 0 100px;
+  padding: 150px 0 50px;
 }
 section .content h1 {
   font-size: 96px;
   margin-top: 50px;
+  font-weight: 400;
+}
+section p {
+  max-width: 26vw;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 140%;
+  letter-spacing: 1.2px;
+  margin-top: 75px;
 }
 
 section.page img {
@@ -150,4 +161,81 @@ section.page img {
   width: 45vw;
   transform: translateX(55vw);
   object-fit: cover;
+}
+
+.main-menu {
+  display: flex;
+  justify-content: space-between;
+  max-width: 23vw;
+}
+.main-menu .main-button {
+  margin-top: 94px;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  position: relative;
+}
+.main-menu .main-button::before {
+  content: "";
+  position: absolute;
+  width: 67px;
+  height: 67px;
+  border: 1px solid var(--black);
+  border-radius: 50%;
+  left: -18px;
+  top: -14px;
+  z-index: -1;
+}
+.main-menu .main-button a {
+  background-color: var(--white);
+  padding-bottom: 16px;
+  position: relative;
+}
+.main-menu .main-button a::before {
+  content: "";
+  position: absolute;
+  bottom: -6px;
+  left: 0;
+  width: 50px;
+  height: 20px;
+  background-image: url(../img/icons/arrow.svg);
+  background-repeat: no-repeat;
+  transition: all 0.5s;
+}
+.main-menu .main-button a:hover::before {
+  left: 50px;
+}
+.main-menu li {
+  max-width: 255px;
+  position: relative;
+}
+.main-menu li::before {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 100%;
+  background-color: var(--black);
+  z-index: -1;
+  transition: all 0.5s;
+}
+.main-menu li a {
+  box-sizing: border-box;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 160%;
+  letter-spacing: 1.8px;
+  padding: 7px 11px;
+  width: 100%;
+  color: var(--black);
+  position: relative;
+  transition: all 0.4s;
+}
+
+.main-menu li:hover > a {
+  color: var(--white);
+}
+
+.main-menu li:hover:before {
+  width: 100%;
 }
