@@ -1,7 +1,7 @@
 body {
     font-family: Cormorant;
     font-size: 24px;
-    font-weight: 700;
+    font-weight: 400;
     color: var(--black-color);
 }
 
@@ -9,7 +9,9 @@ p {
     font-style: italic;
 }
 
-h1, h2, h3 {
+h1,
+h2,
+h3 {
     font-family: voguersansfree;
 }
 
@@ -33,6 +35,33 @@ footer {
 section {
     height: 100vh;
     overflow: hidden;
+}
+
+button {
+    padding: 0 0 16px;
+    font-family: Caviar Dreams;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 160%;
+    letter-spacing: 1.8px;
+    position: relative;
+    &::before {
+        content: '';
+        position: absolute;
+        opacity: .7;
+        bottom: -6px;
+        left: 0;
+        width: 50px;
+        height: 20px;
+        background-image: url(../img/icons/arrow.svg);
+        background-repeat: no-repeat;
+        transition: all 0.5s;
+    }
+
+    &:hover::before {
+        left: 60px;
+    }
 }
 
 .container {

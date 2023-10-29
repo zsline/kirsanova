@@ -39,7 +39,7 @@ li {
 body {
   font-family: Cormorant;
   font-size: 24px;
-  font-weight: 700;
+  font-weight: 400;
   color: var(--black-color);
 }
 
@@ -47,7 +47,9 @@ p {
   font-style: italic;
 }
 
-h1, h2, h3 {
+h1,
+h2,
+h3 {
   font-family: voguersansfree;
 }
 
@@ -69,6 +71,32 @@ footer {
 section {
   height: 100vh;
   overflow: hidden;
+}
+
+button {
+  padding: 0 0 16px;
+  font-family: Caviar Dreams;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 160%;
+  letter-spacing: 1.8px;
+  position: relative;
+}
+button::before {
+  content: "";
+  position: absolute;
+  opacity: 0.7;
+  bottom: -6px;
+  left: 0;
+  width: 50px;
+  height: 20px;
+  background-image: url(../img/icons/arrow.svg);
+  background-repeat: no-repeat;
+  transition: all 0.5s;
+}
+button:hover::before {
+  left: 60px;
 }
 
 .container {
@@ -219,6 +247,26 @@ section.page p {
   line-height: 140%;
   margin-top: 0;
 }
+section.page form {
+  width: 100%;
+}
+section.page form input, section.page form textarea {
+  border: none;
+  display: block;
+  width: 50%;
+  margin-bottom: 20px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  padding-bottom: 4px;
+}
+section.page form input::placeholder, section.page form textarea::placeholder {
+  color: #000000;
+  opacity: 0.2;
+  font-size: 16px;
+}
+section.page form textarea {
+  height: 80px;
+  resize: none;
+}
 
 .main-nav {
   position: absolute;
@@ -295,19 +343,59 @@ section.page p {
   position: relative;
   transition: all 0.4s;
 }
-
-li.is_active::before {
+.main-menu li.is_active::before {
   width: 100%;
 }
-
-li.is_active > a {
+.main-menu li.is_active > a {
   color: var(--white);
 }
-
 .main-menu li:hover > a {
   color: var(--white);
 }
-
 .main-menu li:hover:before {
   width: 100%;
+}
+
+.swiper {
+  width: 100%;
+  padding-bottom: 50px;
+}
+.swiper li {
+  font-style: italic;
+  padding-left: 24px;
+  position: relative;
+  margin-bottom: 4px;
+}
+.swiper li::before {
+  content: "";
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  background-color: var(--black-color);
+  border-radius: 50%;
+  top: 12px;
+  left: 0;
+}
+
+.swiper-pagination {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.swiper-slide {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+}
+
+.swiper-prev, .swiper-next {
+  cursor: pointer;
+}
+
+.swiper-prev[tabindex="-1"], .swiper-next[tabindex="-1"] {
+  opacity: 0.5;
+  cursor: default;
 }
