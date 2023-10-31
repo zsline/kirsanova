@@ -2,4 +2,19 @@
     <div class="container">
         Footer
     </div>
+    <script>
+        const navBtn = document.querySelector('.nav-btns');
+        const open = document.querySelector('.open');
+        const close = document.querySelector('.close');
+        const nav = document.querySelectorAll('nav');
+        navBtn.addEventListener('click', function(){
+            nav.forEach(el =>{
+                el.classList.toggle('is-active');
+            })
+            open.classList.toggle('hidden');
+            close.classList.toggle('is-active');
+        });
+
+    </script>
+
 </footer>

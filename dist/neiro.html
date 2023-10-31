@@ -22,6 +22,10 @@
     </style>
 <header class="header-page">
     <div class="container">
+        <div class="nav-btns">
+            <img class="nav-btn open" src="img/icons/open.svg" alt="">
+            <img class="nav-btn close" src="img/icons/close.svg" alt="">
+        </div>
         <nav>
             <ul>
                 <li><a href="#"><img src="img/icons/youtube.svg" alt=""></a></li>
@@ -31,6 +35,7 @@
         </nav>
     </div>
 </header>
+
 <main>
     <section class="main-page page">
         <img src="img/2.png" alt="">
@@ -68,6 +73,21 @@
     <div class="container">
         Footer
     </div>
+    <script>
+        const navBtn = document.querySelector('.nav-btns');
+        const open = document.querySelector('.open');
+        const close = document.querySelector('.close');
+        const nav = document.querySelectorAll('nav');
+        navBtn.addEventListener('click', function(){
+            nav.forEach(el =>{
+                el.classList.toggle('is-active');
+            })
+            open.classList.toggle('hidden');
+            close.classList.toggle('is-active');
+        });
+
+    </script>
+
 </footer>
 <script src="js/app.min.js"></script>
 </body>
