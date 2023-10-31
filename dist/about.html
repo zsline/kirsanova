@@ -68,15 +68,29 @@
 </main>
 <footer>
     <div class="container">
-        Footer
+        <div class="footer-wrapper">
+            <div class="footer-copy">
+                ©Все права защищены 2023
+            </div>
+            <div class="footer-nav">
+                <ul>
+                    <li><a href="mailto:mail@mail.com">mail@mail.com</a></li>
+                    <li><a href="#"><img src="img/icons/footer_youtube.svg" alt=""></a></li>
+                    <li><a href="#"><img src="img/icons/footer_telegram.svg" alt=""></a></li>
+                </ul>
+            </div>
+            <div class="footer-info">
+            </div>
+        </div>
+
     </div>
     <script>
         const navBtn = document.querySelector('.nav-btns');
         const open = document.querySelector('.open');
         const close = document.querySelector('.close');
         const nav = document.querySelectorAll('nav');
-        navBtn.addEventListener('click', function(){
-            nav.forEach(el =>{
+        navBtn.addEventListener('click', function () {
+            nav.forEach(el => {
                 el.classList.toggle('is-active');
             })
             open.classList.toggle('hidden');
